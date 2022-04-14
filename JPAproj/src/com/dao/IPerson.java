@@ -11,4 +11,5 @@ public interface IPerson {
 	List<Person> viewAllByJob(String job);
 	boolean updatePerson(int id,String job);
 	boolean deletePerson(int id);
+	List<Person> namedQueryByJob(String job);
 }

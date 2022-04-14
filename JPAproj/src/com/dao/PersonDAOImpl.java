@@ -64,8 +64,25 @@ public class PersonDAOImpl implements IPerson {
 	}
 
 	public boolean deletePerson(int id) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean flag=false;
+		try {
+			trans=em.getTransaction();
+			trans.begin();
+			Person person = em.find(Person.class, id);
+			em.remove(person);
+			trans.commit();
+			System.out.println("record inserted");
+			flag=true;
+		} catch (Exception e) {
+			System.out.println(e);
+			flag=false;
+			trans.rollback();
+		}
+		return flag;
+	}
+
+	public List<Person> namedQueryByJob(String job) {
+		return em.createNamedQuery("byJob").setParameter("job",job).getResultList();
 	}
 
 }
