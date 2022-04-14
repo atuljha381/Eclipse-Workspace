@@ -1,0 +1,11 @@
+package com.hib;
+
+import org.hibernate.SessionFactory;
+
+public class PersonHandler {
+	private static SessionFactory factory;
+	public static void main(String[] args) {
+		
+	}
+
+}

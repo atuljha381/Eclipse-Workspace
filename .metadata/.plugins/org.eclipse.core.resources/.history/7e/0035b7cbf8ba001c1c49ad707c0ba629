@@ -1,0 +1,215 @@
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+//////class CompanyJobRepository {
+//////	static String getJobPrediction(int age, String highestQualification) throws NotEligibleException {
+//////		String reString = " ";
+//////		if (age >= 200 || age <= 0) {
+//////			throw new NotEligibleException("The age entered is not typical for a human being");
+//////		} else if (age < 19) {
+//////			throw new NotEligibleException("You are underage for any job");
+//////		} else if (age >= 21 && age < 26 && highestQualification.equalsIgnoreCase("B.E")) {
+//////			reString = "We have openings for junior developer";
+//////		} else if (age >= 26
+//////				&& (highestQualification.equalsIgnoreCase("M.S") || highestQualification.equalsIgnoreCase("PhD"))) {
+//////			reString = "We have openings for senior developer";
+//////		} else if (age >= 19 && highestQualification.equals("")) {
+//////			throw new NotEligibleException("We do not have any job that matches your qualifications");
+//////		} else {
+//////			reString = "Sorry we have no openings for now";
+//////		}
+//////		return reString;
+//////
+//////	}
+//////}
+//////
+//////public class Source {
+//////	public String searchForJob(int age, String highestQualification) throws Exception {
+//////		return CompanyJobRepository.getJobPrediction(age, highestQualification);
+//////	}
+//////
+//////	public static void main(String args[]) {
+//////		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+//////	}
+//////}
+//////
+//////class NotEligibleException extends Exception {
+//////	String arg;
+//////
+//////	public NotEligibleException(String arg) {
+//////		super(arg);
+//////	}
+//////}
+////
+////import java.util.ArrayList;
+////import java.util.HashMap;
+////
+////class Mobile {
+////	// Write your code here..
+////	HashMap<String, ArrayList<String>> mobiles = new HashMap<>();
+////
+////	public String addMobile(String company, String model) {
+////		ArrayList<String> arrayList = mobiles.get(company);
+////		if (!mobiles.containsKey(company)) {
+////			arrayList = new ArrayList<>();
+////			mobiles.put(company, arrayList);
+////		}
+////		arrayList.add(model);
+////
+////		return "model successfully added";
+////
+////	}
+////
+////	public void getModels() {
+////		System.out.println(mobiles);
+////
+////	}
+////
+////	public String buyMobile(String company, String model) {
+//////		ArrayList<String> arrayList = mobiles.get(company);
+////		if (!mobiles.containsKey(company) && mobiles.get(company).contains(model)) {
+////			return "item not available";
+////		}
+////
+////		mobiles.get(company).remove(model);
+////		return "mobile sold successfully";
+////
+////	}
+////}
+////
+////public class Source {
+////	public static void main(String args[]) throws Exception {
+////		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+////		Mobile mobile = new Mobile();
+////		mobile.addMobile("samsung", "galaxy s4");
+////		mobile.addMobile("samsung", "galaxy s5");
+////		mobile.addMobile("apple", "iphone 11");
+////		System.out.println(mobile.buyMobile("samsung", "galaxy s5"));
+////		mobile.getModels();
+////	}
+////}
+//
+//class Activity {
+//	// Implement Activity class here..
+//	String string1, string2;
+//	String operator;
+//
+//	public Activity(String string1, String string2, String operator) {
+//		this.string1 = string1;
+//		this.string2 = string2;
+//		this.operator = operator;
+//	}
+//}
+//
+//public class Source {
+//	// Implement the two function given in description in here...
+//	public String handleException(Activity a) throws Exception {
+//		try {
+//			if (a.string1 == null || a.string2 == null) {
+//				throw new NullPointerException("Null values found");
+//			}
+//			if (!a.operator.equals("+") && !a.operator.equals("-")) {
+//				throw new Exception(a.operator);
+//			}
+//
+//			return "No Exception Found";
+//		} catch (NullPointerException ex) {
+//			return ex.getMessage();
+//		} catch (Exception e) {
+//			return e.getMessage();
+//		}
+//	}
+//
+//	public String doOperation(Activity a) {
+//		String ch = a.operator;
+//		String resultString = "";
+//		switch (ch) {
+//		case "+":
+//			resultString = a.string1 + a.string2;
+//			break;
+//		case "-":
+//			resultString = a.string1.replace(a.string2, "");
+//			break;
+//
+//		}
+//		return resultString;
+//	}
+//
+//	public static void main(String args[]) throws Exception {
+//		// Write your own main to check the program...
+//		Source sc = new Source();
+//		Activity a = new Activity("helloworld", "world", "-");
+//		System.out.println(sc.handleException(a));
+//		System.out.println(sc.doOperation(a));
+//	}
+//}
+
+class Employee {
+	String name;
+	int salary;
+
+	public Employee(String name, int salary) {
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("<");
+		sb.append("name: ");
+		sb.append(name);
+		sb.append(" salary: ");
+		sb.append("" + salary + ">");
+		return sb.toString();
+	}
+
+}
+
+class EmployeeInfo {
+	enum SortMethod {
+		BYNAME, BYSALARY;
+	};
+
+	public List<Employee> sort(List<Employee> emps, final SortMethod method) {
+		List<Employee> sortedEmployees = null;
+		if (method.equals(SortMethod.BYNAME)) {
+			Comparator<Employee> compareByName = Comparator.comparing(Employee::getName).thenComparing(Employee::getSalary);
+			Stream<Employee> empStream = emps.stream();
+			sortedEmployees = empStream.sorted(compareByName).collect(Collectors.toList());
+		} else if (method.equals(SortMethod.BYSALARY)) {
+			Comparator<Employee> compareBySalary = Comparator.comparing(Employee::getSalary).thenComparing(Employee::getName);
+			Stream<Employee> empStream = emps.stream();
+			sortedEmployees = empStream.sorted(compareBySalary).collect(Collectors.toList());
+		}
+		return sortedEmployees;
+
+	}
+
+	public boolean isCharacterPresentInAllNames(Collection<Employee> entities, String character) {
+		for(Employee e:entities) {
+			if(e.getName().startsWith(character.toLowerCase()) || e.getName().startsWith(character.toUpperCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
+}

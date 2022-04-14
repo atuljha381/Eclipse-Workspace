@@ -1,0 +1,14 @@
+package com.registration;
+
+import java.util.ArrayList;
+
+public class DataHandler {
+
+	public static void main(String[] args) {
+		ArrayList<Registration> register = new ArrayList<>();
+		register.add(new Registration(101,"Rajesh","Sharma","2045G,Sethienclave","8107142274","rajshrma@gmail.com"));
+		
+
+	}
+
+}

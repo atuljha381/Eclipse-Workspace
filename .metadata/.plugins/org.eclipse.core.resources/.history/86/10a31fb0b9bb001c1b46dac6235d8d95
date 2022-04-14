@@ -1,0 +1,9 @@
+package com.db;
+
+import javax.persistence.EntityManagerFactory;
+
+public class EntityProvider {
+	private EntityManagerFactory factory = null;
+	private EntityProvider() {}
+	
+}

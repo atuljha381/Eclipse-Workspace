@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=JavaApp1/src&lt;com.relation.comp{Diagram.java[Diagram" modifiers="1" timestamp="1648105077174"/>
+<typeInfo handle="=JavaApp1/src&lt;com.stud{Marks.java[Marks" modifiers="1" timestamp="1648114075593"/>
+<typeInfo handle="=JavaApp1/src&lt;com.stud{Student.java[Student" modifiers="1" timestamp="1648114023905"/>
+<typeInfo handle="=JavaApp1/src&lt;com.bank{ITransaction.java[ITransaction" modifiers="513" timestamp="1648183293808"/>
+<typeInfo handle="=JavaApp1/src&lt;com.relation.comp{Validate.java[Validate" modifiers="1025" timestamp="1648181227867"/>
+<typeInfo handle="=JavaApp1/src&lt;com.bank{Transaction.java[Transaction" modifiers="1025" timestamp="1648185298101"/>
+<typeInfo handle="=JavaApp1/src&lt;com.sales{Sales.java[Sales" modifiers="513" timestamp="1648189351495"/>
+<typeInfo handle="=JavaApp1/src&lt;com.sales{SalesTransaction.java[SalesTransaction" modifiers="1025" timestamp="1648190351048"/>
+<typeInfo handle="=JavaApp1/src&lt;com.hospital{Reception.java[Reception" modifiers="513" timestamp="1648192703227"/>
+<typeInfo handle="=JavaApp1/src&lt;com.hospital{Doctor.java[Doctor" modifiers="1" timestamp="1648192693286"/>
+<typeInfo handle="=JavaApp1/src&lt;com.lambda{ICalculator.java[ICalculator" modifiers="513" timestamp="1648528216256"/>
+<typeInfo handle="=JavaApp1/src&lt;com.jdbc{IPersonDAO.java[IPersonDAO" modifiers="513" timestamp="1648808235111"/>
+<typeInfo handle="=JavaApp1/src&lt;com.layer.dao{IProductDAO.java[IProductDAO" modifiers="513" timestamp="1649047752542"/>
+<typeInfo handle="=JavaApp1/src&lt;com.layer.dao{ISalesDAO.java[ISalesDAO" modifiers="513" timestamp="1649063879824"/>
+</typeInfoHistroy>

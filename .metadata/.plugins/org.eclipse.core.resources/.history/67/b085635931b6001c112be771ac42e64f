@@ -1,0 +1,78 @@
+package com.registration;
+
+public class Registration {
+	private int regno;
+	private String fname, lname;
+	private String address;
+	private long mobno;
+	private String emailString;
+
+	public Registration() {
+		super();
+	}
+
+	public Registration(int regno, String fname, String lname, String address, long mobno, String emailString) {
+		super();
+		this.regno = regno;
+		this.fname = fname;
+		this.lname = lname;
+		this.address = address;
+		this.mobno = mobno;
+		this.emailString = emailString;
+	}
+
+	public int getRegno() {
+		return regno;
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public long getMobno() {
+		return mobno;
+	}
+
+	public String getEmailString() {
+		return emailString;
+	}
+
+	public void setRegno(int regno) {
+		this.regno = regno;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setMobno(long mobno) {
+		this.mobno = mobno;
+	}
+
+	public void setEmailString(String emailString) {
+		this.emailString = emailString;
+	}
+
+	@Override
+	public String toString() {
+		return "Registration [regno=" + regno + ", fname=" + fname + ", lname=" + lname + ", address=" + address
+				+ ", mobno=" + mobno + ", emailString=" + emailString + "]";
+	}
+
+}

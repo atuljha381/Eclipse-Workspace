@@ -1,0 +1,29 @@
+package com.registration;
+
+import java.util.ArrayList;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+public class DataHandler {
+
+	public static void main(String[] args) {
+		ArrayList<Registration> register = new ArrayList<>();
+		register.add(
+				new Registration(101, "Rajesh", "Sharma", "2045G,Sethienclave", "81071422745", "rajshrma@gmail.com"));
+		RegHandler regHandler = new RegHandler();
+//		for (Registration val : register) {
+//			if (!regHandler.allValid(val)) {
+//				System.out.println("Registration failed");
+//			} else {
+//				System.out.println("Registered");
+//			}
+//		}
+
+		Predicate<Registration> cond1 = r -> regHandler.checkEmail(r.getEmailString());
+		Consumer<Registration> output1 = r -> System.out.println(r.toString());
+//		System.out.println(regHandler.checkAddress(regHandler.checkAddress(val)));
+		register.stream().filter(cond1).forEach(output1);
+
+	}
+
+}
