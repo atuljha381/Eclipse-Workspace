@@ -27,7 +27,7 @@ public class Address implements Serializable {
 	private String zipcode;
 
 	//bi-directional one-to-one association to Stud
-	@OneToOne(mappedBy="address", cascade={CascadeType.ALL})
+	@OneToOne(mappedBy="address")
 	private Stud stud;
 
 	public Address() {
