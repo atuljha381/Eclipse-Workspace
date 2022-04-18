@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item value="JavaSE-12" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
 	<item value="false" key="org.eclipse.jdt.ui.last.selected.create.moduleinfo"/>
-	<item value="D:\Capgemini\TRAINING\Softwares\eclipselink-2.5.2.v20140319-9ad6abd\eclipselink\jlib\jpa" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="D:\Capgemini\TRAINING\Softwares\jar_files" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="2" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
@@ -155,6 +155,6 @@
 		<item value="false" key="create_package_info_java"/>
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item value="0" key="pageIndex"/>
+		<item value="2" key="pageIndex"/>
 	</section>
 </section>
