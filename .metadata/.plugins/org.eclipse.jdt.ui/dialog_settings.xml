@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item value="JavaSE-12" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
 	<item value="false" key="org.eclipse.jdt.ui.last.selected.create.moduleinfo"/>
-	<item value="D:\Capgemini\TRAINING\Softwares\Hib3-20220419T051446Z-001\Hib3" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="2" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
